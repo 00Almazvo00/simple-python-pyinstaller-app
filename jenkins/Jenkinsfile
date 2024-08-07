@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python -m py_compile /home/parallels/projects/simple-python-pyinstaller-app/sources/add2vals.py sources/calc.py sources/test_calc.py
-                stash(name: 'Jenkinsfile', includes: 'sources/calc.py')
+                sh 'python -m py_compile /home/parallels/projects/simple-python-pyinstaller-app/sources/add2vals.py sources/calc.py
+                stash(name: 'compiled-results', includes: 'sources/calc.py')
             }
         }
     }
